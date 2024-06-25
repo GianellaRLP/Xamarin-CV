@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_DBP.MainPage"
+             BackgroundColor="#EBF5FF">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Estilos para el header -->
+            <Style x:Key="HeaderStyle" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#585858" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="0,0,0,10" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="Orientation" Value="Vertical" />
+            </Style>
+
+            <!-- Estilo para los textos en el header -->
+            <Style x:Key="HeaderTextStyle" TargetType="StackLayout">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <!-- Estilo para el nombre -->
+            <Style x:Key="NameStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <!-- Estilo para la posición -->
+            <Style x:Key="PositionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#C2BEBE" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <!-- Estilos para las secciones -->
+            <Style x:Key="SectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="10,20,10,10" />
+            </Style>
+
+            <Style x:Key="SubSectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+            </Style>
+
+            <Style x:Key="SubSectionDetailStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#666666" />
+            </Style>
+
+            <Style x:Key="SubSectionLocationStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="TextColor" Value="#666666" />
+            </Style>
+
+            <Style x:Key="ContentTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="0,0,0,5" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout>
+            <!-- Header -->
+            <StackLayout Style="{StaticResource HeaderStyle}">
+                <StackLayout Style="{StaticResource HeaderTextStyle}">
+                    <Label Text="Mayo Martínez" Style="{StaticResource NameStyle}" />
+                    <Label Text="BUSCANDO PUESTO" Style="{StaticResource PositionStyle}" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Sección de perfil -->
+            <StackLayout BackgroundColor="White" Padding="15" Margin="10">
+                <Label Text="PERFIL" Style="{StaticResource SectionTitleStyle}" />
+                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,10" />
+                <Label Text="Trabajador Social con 4 años de experiencia en proyectos colectivos. Mi objetivo es lograr que los jóvenes obtengan acceso a la educación superior mediante logros deportivos." Style="{StaticResource ContentTextStyle}" />
+            </StackLayout>
+
+            <!-- Sección de experiencia -->
+            <StackLayout BackgroundColor="#F2F2F2" Padding="15" Margin="10">
+                <Label Text="EXPERIENCIA LABORAL" Style="{StaticResource SectionTitleStyle}" />
+                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,10" />
+
+                <!-- Primer puesto -->
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Trabajador Social" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Mexico DF | 2022 - Actualmente" Style="{StaticResource SubSectionLocationStyle}" />
+                    <Label Text="• Coordinador y mediador entre los equipos de ayuda psicológica a jóvenes y niños en exclusión social." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Velar por la salud mental del equipo y de miembros involucrados en proyectos." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Mapeo de necesidades estratégicas y lógicas para las diferentes áreas." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Monitor de ejercicios físicos para adolescentes." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Programación de diferentes actividades extracurriculares para los involucrados." Style="{StaticResource ContentTextStyle}" />
+                </StackLayout>
+
+                <!-- Segundo puesto -->
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Trabajador Social" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Mexico DF | 2020 - 2022" Style="{StaticResource SubSectionLocationStyle}" />
+                    <Label Text="• Funciones para seguimientos de casos para jóvenes con problemas de adicciones." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Capacitaciones e integraciones vinculadas a medidas preventivas." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Recopilación de evidencias para auditorías y programas sociales." Style="{StaticResource ContentTextStyle}" />
+                </StackLayout>
+
+                <!-- Tercer puesto -->
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Trabajador Social (Prácticas)" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Zaragoza, España | 2019 - 2020" Style="{StaticResource SubSectionLocationStyle}" />
+                    <Label Text="• Profesor de lengua española e inglesa para jóvenes migrantes." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Monitor de actividades ecológicas con adolescentes." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Coordinador de áreas deportivas." Style="{StaticResource ContentTextStyle}" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Sección de formación -->
+            <StackLayout BackgroundColor="White" Padding="15" Margin="10">
+                <Label Text="FORMACIÓN" Style="{StaticResource SectionTitleStyle}" />
+                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,10" />
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Grado de trabajo social" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="ESMA, Madrid | 2012 - 2015" Style="{StaticResource SubSectionLocationStyle}" />
+                </StackLayout>
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Licenciatura Profesional" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Universidad de la frontera, Mexico DF | 2011 - 2012" Style="{StaticResource SubSectionLocationStyle}" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
